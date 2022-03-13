@@ -1,0 +1,93 @@
+
+<html>
+<style>
+body {
+    color: rgb(0, 0, 0);
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100%;
+    font-size: 14px;
+}
+
+div {
+    display: block;
+}
+
+.widget__table {
+    border-top: 1px solid #eceff1;
+    margin: 0 -16px;
+    word-break: break-all;
+}
+
+.table__row {
+    border-bottom: 1px solid #eceff1;
+    text-decoration: none;
+    color: #000;
+}
+
+.table__head, .table__row {
+    display: flex;
+}
+
+.table__col {
+    line-height: 1.5em;
+    padding: 10px 15px;
+    flex: 1;
+}
+
+.bar {
+    border-radius: 3px;
+    background: #eee;
+    display: inline-flex;
+    width: 100%;
+}
+
+.bar, .bar__fill {
+    height: 18px;
+    overflow: hidden;
+}
+
+.bar__fill {
+    display: inline-block;
+    background: #04b;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.bar__fill_status_failed {
+    background: rgb(253, 90, 62);
+}
+
+.bar__fill_status_broken {
+    background: rgb(255, 208, 80);
+}
+
+.bar__fill_status_passed {
+    background: rgb(151, 204, 100);
+}
+
+
+</style>
+<body>
+<div class="table widget__table">
+        <div class="table__row">
+            <div class="table__col">Label 1</div>
+            <div class="table__col">
+                <div class="bar">
+                <div class="bar__fill bar__fill_status_failed" style="flex-grow: 8">8</div>
+                <div class="bar__fill bar__fill_status_broken" style="flex-grow: 4">4</div>
+                <div class="bar__fill bar__fill_status_passed" style="flex-grow: 12">12</div>
+                </div>
+            </div>
+        </div>
+        <div class="table__row">
+            <div class="table__col">Label 2</div>
+            <div class="table__col">
+                <div class="bar"><div class="bar__fill bar__fill_status_broken" style="flex-grow: 86">86</div>
+                <div class="bar__fill bar__fill_status_passed" style="flex-grow: 43">43</div></div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
