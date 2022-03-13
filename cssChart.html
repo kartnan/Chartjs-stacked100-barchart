@@ -18,14 +18,14 @@ div {
     word-break: break-all;
 }
 
+.table__head, .table__row {
+    display: flex;
+}
+
 .table__row {
     border-bottom: 1px solid #eceff1;
     text-decoration: none;
     color: #000;
-}
-
-.table__head, .table__row {
-    display: flex;
 }
 
 .table__col {
@@ -34,18 +34,18 @@ div {
     flex: 1;
 }
 
+.bar, .bar__fill {
+    height: 18px;
+    overflow: hidden;
+}
+
 .bar {
     border-radius: 3px;
     background: #eee;
     display: inline-flex;
     width: 100%;
 }
-
-.bar, .bar__fill {
-    height: 18px;
-    overflow: hidden;
-}
-
+    
 .bar__fill {
     display: inline-block;
     background: #04b;
